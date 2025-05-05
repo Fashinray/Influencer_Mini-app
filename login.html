@@ -6,25 +6,25 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container-login" id="loginform">
+    <div class="container-login" >
         <h1>Login</h1>
 
-        <form action="">
+        <form action="" id="login-form">
             <label for="">Email</label>
-            <input id="email" type="text" placeholder="Email" required>
+            <input id="email" type="text" placeholder="email" required>
 
             <label for="">Password</label>
             <input id="password" type="password" placeholder="password" required>
 
             <div class="checkbox">
-                <input type="checkbox" id="optional" >
+                <input type="checkbox" id="isInfluencer" >
                 <span>Register as Influencer</span>
             </div>
 
-            <button type="submit" onclick="location.href='editp.html'">Login</button>
+            <button id="login-btn" type="submit">Login</button>
 
             <p class="sign_link">
-                Don't have an account? <a href="signup.html">sign up</a> 
+                Don't have an account? <a href="signup.html" id="signup-link">sign up</a> 
             </p> 
             
 

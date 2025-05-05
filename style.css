@@ -149,8 +149,13 @@ button:hover {
 }
 
 .edit p {
-    text-align: none;
     margin-bottom: 1rem;
+}
+
+.edit p a {
+    text-decoration: none;
+    color: rgb(18, 16, 16);
+
 }
 
 
@@ -188,7 +193,7 @@ h1 {
     color: rgb(0, 0, 0);
   }
 
-  .card {
+  .p-card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 12px;
@@ -199,7 +204,7 @@ h1 {
     margin-bottom: 15px;
   }
 
-  .card:hover{
+  .p-card:hover{
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   }
 

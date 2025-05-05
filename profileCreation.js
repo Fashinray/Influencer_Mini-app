@@ -1,19 +1,38 @@
-// Save profile info
-async function saveProfile({ name, category, bio, social }) {
-    const user = (await supabase.auth.getUser()).data.user;
-    if (!user) return alert('Not logged in');
-  
-    const { error } = await supabase.from('profiles').upsert({
-      id: user.id,
-      full_name: name,
-      category,
-      bio,
-      handle: name.toLowerCase().replace(/\s+/g, ''),
-      social_link: social,
-    });
-  
-    if (error) return alert(error.message);
-    alert('Profile saved!');
-    window.location.href = 'dashboard.html';
+// Save profile form data to Supabase
+const profileForm = document.getElementById('profile-form');
+
+profileForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const display_name = document.getElementById('displayName').value.trim();
+  const bio = document.getElementById('bio').value.trim();
+  const category = document.getElementById('category').value;
+  const social_link = document.querySelector('#sLink a').href.trim();
+
+  const { data: userData, error: userError } = await supabase.auth.getUser();
+  if (userError) {
+    alert("Couldn't fetch user");
+    return;
   }
-  
+
+  const user_id = userData.user.id;
+
+  // Insert or upsert profile
+  const { error } = await supabase.from('profiles').upsert({
+    user_id,
+    display_name,
+    bio,
+    category,
+    social_link,
+    is_influencer: true,
+    created_at: new Date().toISOString()
+  });
+
+  if (error) {
+    alert('Failed to save profile: ' + error.message);
+    return;
+  }
+
+  // Redirect to influencer snippet page
+  window.location.href = 'influencers.html';
+});
