@@ -159,7 +159,7 @@ button:hover {
 }
 
 
-/*** Influencer Snippet Profile Page ***/
+/*** Influencer Snippet Profile Page 
 
 .container_influencer {
     background: #ffff;
@@ -235,13 +235,28 @@ h1 {
   }
   
   .category.beauty {
-    color: #7b3f00; /* Slightly brownish color for Beauty */
+    color: #7b3f00;  Slightly brownish color for Beauty 
   }
   
   .bio {
     margin: 0;
     font-size: 14px;
     color: #333;
+  }
+  ***/
+
+  .influencer-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 8px 0;
+    background: white;
+  }
+  .profile-pic {
+    background: #ccc;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
   }
 
   /*** User Profile ****/

@@ -7,7 +7,7 @@
 
 </head>
 <body>
-    
+    <!--
     <div class="edit">
 
         <h1> Edit Profile</h1>
@@ -35,6 +35,19 @@
               <button type="submit">Save</button>
         </form>
     </div>
+-->
+
+<h2>Edit Profile</h2>
+<form id="profile-form">
+  <input type="text" id="displayName" placeholder="Display Name" required>
+  <textarea id="bio" placeholder="Bio"></textarea>
+  <input type="url" id="socialLink" placeholder="Social Media Link">
+  <input type="text" id="category" placeholder="Category">
+  <p id="sLink">
+    <a href=""> Social Media Link</a>
+</p>
+  <button id="save-profile" type="submit">Save</button>
+</form>
 
 
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>

@@ -62,6 +62,10 @@ async function handleSignUp(email, password) {
           alert('Login failed: ' + error.message);
           return;
         }
+
+        // Save user ID for later use
+        localStorage.setItem("user_id", data.user.id);
+        alert("Logged in!");
   
         // Redirect logic
         if (isInfluencer) {
