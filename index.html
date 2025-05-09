@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container-login" >
+        <h1>Login</h1>
+
+        <form action="" id="login-form">
+            <label for="">Email</label>
+            <input id="email" type="text" placeholder="email" required>
+
+            <label for="">Password</label>
+            <input id="password" type="password" placeholder="password" required>
+
+            <div class="checkbox">
+                <input type="checkbox" id="isInfluencer" >
+                <span>Register as Influencer</span>
+            </div>
+
+            <button id="login-btn" type="submit">Login</button>
+
+            <p class="sign_link">
+                Don't have an account? <a href="signup.html" id="signup-link">sign up</a> 
+            </p> 
+            
+
+
+
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabaseClient.js"></script>
+    <script src="auth.js"></script>
+    
+</body>
+</html>
